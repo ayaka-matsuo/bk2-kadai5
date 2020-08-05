@@ -4,6 +4,7 @@ get "home/about" => "about#index"
 devise_for :users
 root to: "home#index"
 get  "/users/:id/following_posts/" => "users#following_posts"
+get 'search' => 'searches#search'
 resources :users do
 	resource :relationships, only: [:create, :destroy]
 
